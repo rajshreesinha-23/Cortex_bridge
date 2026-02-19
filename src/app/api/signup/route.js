@@ -30,3 +30,23 @@ export async function POST(req) {
     );
   }
 }
+export async function POST(req) {
+  try {
+    const body = await req.json();
+
+    const { name, email, password } = body;
+
+    console.log("User received:", name, email, password);
+
+    return Response.json({
+      success: true,
+      message: "Signup successful"
+    });
+
+  } catch (error) {
+    return Response.json({
+      success: false,
+      message: "Signup failed"
+    });
+  }
+}
