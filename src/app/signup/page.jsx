@@ -1,25 +1,71 @@
-import { NextResponse } from "next/server";
+"use client";
 
-export async function POST(req) {
-  try {
-    const body = await req.json();
+import { useState } from "react";
 
-    const response = await fetch(
-      "https://auth-universal-repo.vercel.app/signup",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": process.env.AUTH_API_KEY,
-        },
-        body: JSON.stringify(body),
-      }
-    );
+export default function SignupPage() {
 
-    const data = await response.json();
-    return NextResponse.json(data, { status: response.status });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: ""
+  });
 
-  } catch (error) {
-    return NextResponse.json({ error: "Signup failed" }, { status: 500 });
-  }
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await res.json();
+
+    alert(data.message);
+  };
+
+  return (
+    <div className="p-10">
+      <h1 className="text-2xl font-bold">Signup</h1>
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-64">
+
+        <input
+          name="name"
+          placeholder="Name"
+          onChange={handleChange}
+          className="border p-2"
+        />
+
+        <input
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+          className="border p-2"
+        />
+
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={handleChange}
+          className="border p-2"
+        />
+
+        <button className="bg-green-600 text-white p-2">
+          Register
+        </button>
+
+      </form>
+    </div>
+  );
 }
