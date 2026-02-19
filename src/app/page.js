@@ -3,6 +3,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Input from './components/Input';
+import Link from "next/link";
 import { Eye, Headphones, Brain, BookOpen, ArrowRight, Zap, Users, Globe } from 'lucide-react';
 import Footer from './components/Footer';
 
@@ -20,9 +21,12 @@ export default function Page() {
             <a href="#benefits" className="text-gray-600 hover:text-green-600 transition">Benefits</a>
             <a href="#cta" className="text-gray-600 hover:text-green-600 transition">Get Started</a>
           </div>
-          <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
-            Sign Up
-          </button>
+          <Link href="/signup">
+  <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+    Sign Up
+  </button>
+</Link>
+
         </div>
       </nav>
 
