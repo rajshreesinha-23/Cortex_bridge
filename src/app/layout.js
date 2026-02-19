@@ -1,4 +1,6 @@
 import "./globals.css";
+import VoiceCommandNavigator from "./components/VoiceCommandNavigator";
+import QuickActionsBar from "./components/QuickActionsBar";
 
 export const metadata = {
   title: "CortexBridge",
@@ -10,6 +12,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <VoiceCommandNavigator />
+        <QuickActionsBar />
       </body>
     </html>
   );

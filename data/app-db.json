@@ -1,0 +1,65 @@
+{
+  "users": [],
+  "progressByUser": {},
+  "preferencesByUser": {
+    "sneha@gmail.com": {
+      "largeText": true,
+      "wideSpacing": true,
+      "focusLine": false,
+      "captionsEnabled": true,
+      "transcriptVisible": true,
+      "voiceAutoSpeak": false,
+      "accessibilityNeeds": [],
+      "email": "sneha@gmail.com"
+    }
+  },
+  "lessons": [
+    {
+      "id": "dys-1",
+      "type": "dyslexia",
+      "title": "Understanding Fractions",
+      "content": "A fraction represents part of a whole. If a pizza has 8 slices and you eat 2, you ate two-eighths.",
+      "question": "If you eat 4 of 8 slices, what fraction did you eat?",
+      "options": [
+        "1/8",
+        "1/2",
+        "1/4"
+      ],
+      "answer": "1/2"
+    },
+    {
+      "id": "dys-2",
+      "type": "dyslexia",
+      "title": "Reading Comprehension",
+      "content": "Main idea means the most important point in a paragraph. Details explain and support that idea.",
+      "question": "What does supporting detail do?",
+      "options": [
+        "Changes topic",
+        "Supports the main idea",
+        "Removes examples"
+      ],
+      "answer": "Supports the main idea"
+    },
+    {
+      "id": "insp-1",
+      "type": "inspiration",
+      "title": "You Are Building Skill Every Day",
+      "caption": "Progress is not always loud. Every small step is valid. Review one concept today and celebrate the effort.",
+      "transcript": "Take one short lesson today, write one sentence about what you understood, and you have already moved forward."
+    },
+    {
+      "id": "insp-2",
+      "type": "inspiration",
+      "title": "Learning Is a Team Journey",
+      "caption": "Ask for support early. Shared understanding grows faster than silent struggle. You belong in this learning space.",
+      "transcript": "Find a peer, mentor, or teacher and send one question. Collaboration is a strength, not a weakness."
+    },
+    {
+      "id": "insp-3",
+      "type": "inspiration",
+      "title": "Consistency Beats Intensity",
+      "caption": "Fifteen focused minutes every day can create powerful outcomes. Keep the rhythm and trust the process.",
+      "transcript": "Set a small daily learning slot, repeat it, and reflect weekly. Your system matters more than one perfect day."
+    }
+  ]
+}
