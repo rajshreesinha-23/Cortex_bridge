@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "CortexBridge",
   description: "Inclusive AI learning platform",
