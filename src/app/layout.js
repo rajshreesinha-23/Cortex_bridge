@@ -1,31 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";   // ✅ ADD THIS
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  const res = await fetch("/api/login", {
+    method: "POST",
+    body: JSON.stringify(form),
+    headers: { "Content-Type": "application/json" }
+  });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  const data = await res.json();
 
-export const metadata = {
-  title: "Cortex Bridge - NeuroLens AI",
-  description: "Adaptive Multimodal Learning Platform for Every Brain",
+  if (res.ok) {
+    router.push("/");
+  }
 };
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />        {/* ✅ ADD THIS LINE */}
-        {children}
-      </body>
-    </html>
-  );
-}

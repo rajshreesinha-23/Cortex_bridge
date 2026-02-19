@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { useState } from 'react';
+import Input from './components/Input';
 import { Eye, Headphones, Brain, BookOpen, ArrowRight, Zap, Users, Globe } from 'lucide-react';
 import Footer from './components/Footer';
 
