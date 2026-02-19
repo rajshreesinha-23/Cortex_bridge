@@ -19,7 +19,8 @@ export default function SignupPage() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
+  console.log("FORM SUBMITTED");
 
     const res = await fetch("/api/signup", {
       method: "POST",
@@ -65,6 +66,10 @@ export default function SignupPage() {
         <button className="bg-green-600 text-white p-2">
           Register
         </button>
+        <button type="submit" className="bg-green-600 text-white p-2">
+  Register
+</button>
+
 
       </form>
     </div>
